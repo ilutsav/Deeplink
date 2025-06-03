@@ -1,16 +1,30 @@
-# deeplink
+# Flutter Deep Link Implementation with app_links
 
-A new Flutter project.
+This Flutter project demonstrates how to handle deep links and dynamic links using the [`app_links`](https://pub.dev/packages/app_links) package. It also shows how to create and process dynamic links via an API or URL parameters.
+
+---
+
+## Features
+
+- Listen for app links (deep links) when the app is launched from a terminated state.
+- Listen for incoming app links while the app is running (foreground or background).
+- Handle different link paths (`/product`, `/profile`, `/share`) with query parameters.
+- Navigate to appropriate screens based on deep link content.
+- Support for custom dynamic link creation via API or URL parameter construction.
+- Android manifest setup for deep link handling and app link verification.
+
+---
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### 1. Setup and Dependencies
 
-A few resources to get you started if this is your first Flutter project:
+Add the required dependencies to your `pubspec.yaml` file:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  http: ^1.4.0
+  app_links: ^6.4.0
